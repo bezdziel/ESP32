@@ -3,6 +3,8 @@
 #include "Settings/AppSettings.h"
 #include "ConnectionProviders/ConnectionFactory.h"
 #include "Oled/OledDisplay.h"
+#include "Operations/OperationMenager.h"
+#include "Rest/Rest.h"
 
 namespace MicroController
 {
@@ -18,6 +20,7 @@ namespace MicroController
 		float Version = 0.1f;
 
 	private:
+		OperationMenager *Menager;
 		ConnectionProvider* Provider;
 		OledDisplay* Oled;
 		void Provider_OnMessage(const std::string &message);

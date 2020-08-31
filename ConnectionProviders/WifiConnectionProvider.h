@@ -13,7 +13,7 @@ namespace MicroController
 {
 	class WifiConnectionProvider : public ConnectionProvider {
 	public:
-		WifiConnectionProvider();
+		WifiConnectionProvider(OperationMenager *menager);
 		~WifiConnectionProvider();
 		vector<string> ssid;
 		vector<string> pass;
@@ -24,7 +24,6 @@ namespace MicroController
 	private:
 		string GetIp(IPAddress ipAddress);
 		WebsocketsClient *client;
-		WiFiClient *webClient;
 		bool socketsConnected = false;
 		int connectionCount = 0;
 	};

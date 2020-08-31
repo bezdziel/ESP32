@@ -28,7 +28,7 @@ namespace MicroController
 	class ConnectionProvider
 	{
 	public:
-		ConnectionProvider();
+		ConnectionProvider(OperationMenager *menager);
 		~ConnectionProvider();
 		virtual int Connect();
 		virtual bool Setup();

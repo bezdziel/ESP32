@@ -8,6 +8,6 @@ namespace MicroController
 	class ConnectionFactory final
 	{
 	public:
-		static ConnectionProvider *Create(int type);
+		static ConnectionProvider *Create(int type, OperationMenager *menager);
 	};
 }

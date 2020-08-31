@@ -41,8 +41,11 @@ namespace MicroController
 		if (_operations->size() > 0)
 		{
 			auto operation = _operations->front();
-			if (operation->Ready()) {
+			if (operation->State == Finished) {
 				_operations->pop_front();
+				return;
+			}
+			if (operation->Ready()) {
 				operation->Invoke();
 			}
 		}

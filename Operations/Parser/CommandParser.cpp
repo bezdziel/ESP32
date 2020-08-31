@@ -17,10 +17,7 @@ namespace MicroController
         for (int i = 0; i < _patterns->size(); i++) {
 
             auto pattern = regex(_patterns->at(i));
-            // Crash here if not match, why?
-            //if (!regex_match(command, pattern)) {
-            //    continue;
-            //}
+           
             vector<string> *m = new vector<string>();
             smatch matches;
 

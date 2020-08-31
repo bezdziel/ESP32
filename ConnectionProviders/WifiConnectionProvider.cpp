@@ -2,13 +2,12 @@
 
 namespace MicroController
 {
-	WifiConnectionProvider::WifiConnectionProvider() : ConnectionProvider() {
+	WifiConnectionProvider::WifiConnectionProvider(OperationMenager *menager) : ConnectionProvider(menager) {
 		client = new WebsocketsClient();
 	}
 
 	WifiConnectionProvider::~WifiConnectionProvider() {
 		delete client;
-		delete webClient;
 	}
 
 	bool WifiConnectionProvider::Setup()

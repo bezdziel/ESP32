@@ -2,12 +2,12 @@
 
 namespace MicroController
 {
-	ConnectionProvider::ConnectionProvider() {
-		Menager = new OperationMenager();
+	ConnectionProvider::ConnectionProvider(OperationMenager *menager) {
+		Menager = menager;
 	}
 
 	ConnectionProvider::~ConnectionProvider() {
-		delete Menager;
+		
 	}
 
 	int ConnectionProvider::Connect()
